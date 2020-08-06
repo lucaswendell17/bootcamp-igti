@@ -22,3 +22,57 @@
 2020-08-06T15:58:22.844Z [my-bank-api] info: GET /account/:id
 2020-08-06T15:58:32.316Z [my-bank-api] info: POST /account - {"id":3,"nome":"Lucas Wendel","balance":2520.5}
 2020-08-06T15:58:38.597Z [my-bank-api] info: DELETE /account/:id - 3
+2020-08-06T16:08:23.532Z [my-bank-api] info: API Started!
+2020-08-06T16:08:37.181Z [my-bank-api] info: API Started!
+2020-08-06T16:09:59.998Z [my-bank-api] info: API Started!
+2020-08-06T16:10:15.090Z [my-bank-api] error: POST /account - Name e Balance são obrigatórios.
+2020-08-06T16:10:59.209Z [my-bank-api] error: POST /account - Name e Balance são obrigatórios.
+2020-08-06T16:11:21.889Z [my-bank-api] info: POST /account - {"id":4,"name":"Lucas Wendel","balance":2520.5}
+2020-08-06T16:11:25.510Z [my-bank-api] info: GET /account
+2020-08-06T16:12:22.573Z [my-bank-api] info: API Started!
+2020-08-06T16:12:40.998Z [my-bank-api] info: POST /account - {"id":5,"name":"Lucas Wendel","balance":0}
+2020-08-06T16:12:48.516Z [my-bank-api] info: DELETE /account/:id - 6
+2020-08-06T16:12:51.069Z [my-bank-api] info: GET /account
+2020-08-06T16:14:01.675Z [my-bank-api] info: DELETE /account/:id - 5
+2020-08-06T16:14:05.863Z [my-bank-api] info: GET /account
+2020-08-06T16:14:31.636Z [my-bank-api] info: DELETE /account/:id - 4
+2020-08-06T16:14:37.896Z [my-bank-api] info: GET /account
+2020-08-06T16:15:39.801Z [my-bank-api] info: API Started!
+2020-08-06T16:16:42.374Z [my-bank-api] info: POST /account - {"id":3,"name":"Leonardo Pereira","balance":2500}
+2020-08-06T16:17:05.952Z [my-bank-api] info: POST /account - {"id":4,"name":"Leandro Pascal","balance":2500}
+2020-08-06T16:17:16.412Z [my-bank-api] info: GET /account
+2020-08-06T16:19:09.587Z [my-bank-api] info: API Started!
+2020-08-06T16:19:21.167Z [my-bank-api] info: API Started!
+2020-08-06T16:19:40.709Z [my-bank-api] info: API Started!
+2020-08-06T16:20:01.507Z [my-bank-api] info: API Started!
+2020-08-06T16:20:19.827Z [my-bank-api] info: PATCH /account/updateBalance - {"id":2,"balance":4250}
+2020-08-06T16:20:29.994Z [my-bank-api] error: PATCH /account - Cannot set property 'balance' of undefined
+2020-08-06T16:20:42.992Z [my-bank-api] error: PUT /account - Registro não encontrado.
+2020-08-06T16:21:00.923Z [my-bank-api] info: API Started!
+2020-08-06T16:21:04.377Z [my-bank-api] info: GET /account
+2020-08-06T16:21:08.281Z [my-bank-api] info: GET /account/:id
+2020-08-06T16:21:11.770Z [my-bank-api] error: GET /account - Registro não encontrado.
+2020-08-06T16:21:17.436Z [my-bank-api] info: GET /account
+2020-08-06T16:21:23.460Z [my-bank-api] info: GET /account/:id
+2020-08-06T16:22:48.944Z [my-bank-api] info: API Started!
+2020-08-06T16:22:57.164Z [my-bank-api] error: POST /account - Name e Balance são obrigatórios.
+2020-08-06T16:23:07.582Z [my-bank-api] info: POST /account - {"id":5,"name":"Roberto da Silva","balance":2500}
+2020-08-06T16:23:45.938Z [my-bank-api] error: PUT /account - Cannot read property 'trim' of undefined
+2020-08-06T16:24:32.099Z [my-bank-api] info: API Started!
+2020-08-06T16:24:34.911Z [my-bank-api] error: PUT /account - Name e Balance são obrigatórios.
+2020-08-06T16:24:41.372Z [my-bank-api] error: PUT /account - Name e Balance são obrigatórios.
+2020-08-06T16:24:50.702Z [my-bank-api] info: PUT /account - {"id":2,"name":"Lucas Wendel","balance":2520.5}
+2020-08-06T16:24:58.723Z [my-bank-api] info: GET /account/:id
+2020-08-06T16:25:45.022Z [my-bank-api] info: API Started!
+2020-08-06T16:26:27.969Z [my-bank-api] info: PUT /account - {"id":2,"name":"Lucas Wendel","balance":2520.5,"teste":12}
+2020-08-06T16:26:52.755Z [my-bank-api] info: GET /account
+2020-08-06T16:27:55.528Z [my-bank-api] error: PATCH /account - Registro não encontrado.
+2020-08-06T16:28:00.707Z [my-bank-api] info: PATCH /account/updateBalance - {"id":2,"balance":4250}
+2020-08-06T16:29:09.999Z [my-bank-api] info: API Started!
+2020-08-06T16:29:20.608Z [my-bank-api] info: API Started!
+2020-08-06T16:29:43.704Z [my-bank-api] info: API Started!
+2020-08-06T16:29:52.600Z [my-bank-api] info: API Started!
+2020-08-06T16:30:01.180Z [my-bank-api] error: PATCH /account - Id e Balance são obrigatórios.
+2020-08-06T16:31:49.312Z [my-bank-api] info: API Started!
+2020-08-06T16:31:54.878Z [my-bank-api] error: PUT /account - Id, Name e Balance são obrigatórios.
+2020-08-06T16:31:58.657Z [my-bank-api] info: PUT /account - {"id":2,"name":"Lucas Wendel","balance":2520.5}

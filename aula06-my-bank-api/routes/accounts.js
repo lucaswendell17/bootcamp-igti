@@ -9,9 +9,17 @@ router.post('/', async (req, res, next) => {
   try {
     let account = req.body;
 
+    if (!account.name || account.balance == null) {
+      throw new Error('Name e Balance são obrigatórios.');
+    }
+
     const data = JSON.parse(await readFile(global.filename));
 
-    account = { id: data.nextId++, ...account };
+    account = {
+      id: data.nextId++,
+      name: account.name,
+      balance: account.balance,
+    };
 
     data.accounts.push(account);
 
@@ -42,7 +50,9 @@ router.get('/:id', async (req, res, next) => {
     const account = data.accounts.find(
       (account) => account.id === parseInt(req.params.id)
     );
-    if (!account) res.status(400).send({ error: 'Account not found.' });
+    if (!account) {
+      throw new Error('Registro não encontrado.');
+    }
     res.send(account);
     global.logger.info('GET /account/:id');
   } catch (err) {
@@ -67,11 +77,21 @@ router.delete('/:id', async (req, res, next) => {
 router.put('/', async (req, res, next) => {
   try {
     const account = req.body;
+
+    if (!account.id || !account.name || account.balance == null) {
+      throw new Error('Id, Name e Balance são obrigatórios.');
+    }
+
     const data = JSON.parse(await readFile(global.filename));
 
     const index = data.accounts.findIndex((a) => a.id === account.id);
 
-    data.accounts[index] = account;
+    if (index === -1) {
+      throw new Error('Registro não encontrado.');
+    }
+
+    data.accounts[index].name = account.name;
+    data.accounts[index].balance = account.balance;
 
     await writeFile(global.filename, JSON.stringify(data, null, 2));
     res.send(account);
@@ -84,9 +104,18 @@ router.put('/', async (req, res, next) => {
 router.patch('/updateBalance', async (req, res, next) => {
   try {
     const account = req.body;
+
+    if (!account.id || account.balance == null) {
+      throw new Error('Id e Balance são obrigatórios.');
+    }
+
     const data = JSON.parse(await readFile(global.filename));
 
     const index = data.accounts.findIndex((a) => a.id === account.id);
+
+    if (index === -1) {
+      throw new Error('Registro não encontrado.');
+    }
 
     data.accounts[index].balance = account.balance;
 
