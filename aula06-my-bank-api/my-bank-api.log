@@ -1,0 +1,24 @@
+2020-08-06T15:50:35.670Z [my-bank-api] info: API Started!
+2020-08-06T15:51:04.597Z [my-bank-api] error: GET /account - ENOENT: no such file or directory, open 'I:\IGTI-BootCamp\bootcamp-igti\aula06-my-bank-api\accounts.json'
+2020-08-06T15:51:30.140Z [my-bank-api] info: API Started and File Created!
+2020-08-06T15:52:20.441Z [my-bank-api] info: API Started!
+2020-08-06T15:52:55.870Z [my-bank-api] info: API Started!
+2020-08-06T15:53:36.834Z [my-bank-api] info: API Started!
+2020-08-06T15:54:02.130Z [my-bank-api] info: API Started!
+2020-08-06T15:54:09.476Z [my-bank-api] info: API Started!
+2020-08-06T15:54:46.848Z [my-bank-api] info: API Started!
+2020-08-06T15:55:02.102Z [my-bank-api] info: API Started!
+2020-08-06T15:55:14.759Z [my-bank-api] info: API Started!
+2020-08-06T15:55:33.338Z [my-bank-api] info: API Started!
+2020-08-06T15:56:15.443Z [my-bank-api] info: API Started!
+2020-08-06T15:56:34.459Z [my-bank-api] info: API Started!
+2020-08-06T15:56:42.928Z [my-bank-api] info: API Started!
+2020-08-06T15:57:04.777Z [my-bank-api] info: GET /account
+2020-08-06T15:57:11.996Z [my-bank-api] info: POST /account - {"id":1,"nome":"Roberto Carlos","balance":520}
+2020-08-06T15:57:34.107Z [my-bank-api] info: POST /account - {"id":2,"nome":"Lucas Wendel","balance":2520.5}
+2020-08-06T15:57:49.990Z [my-bank-api] info: PUT /account - {"id":2,"nome":"Jose antonio","balance":2500}
+2020-08-06T15:57:55.879Z [my-bank-api] info: PUT /account - {"id":2,"nome":"Lucas Wendel","balance":2520.5}
+2020-08-06T15:58:05.458Z [my-bank-api] info: PATCH /account/updateBalance - {"id":2,"balance":4250}
+2020-08-06T15:58:22.844Z [my-bank-api] info: GET /account/:id
+2020-08-06T15:58:32.316Z [my-bank-api] info: POST /account - {"id":3,"nome":"Lucas Wendel","balance":2520.5}
+2020-08-06T15:58:38.597Z [my-bank-api] info: DELETE /account/:id - 3

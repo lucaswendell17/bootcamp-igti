@@ -1,25 +1,15 @@
 {
-  "nextId": 5,
+  "nextId": 4,
   "accounts": [
     {
       "id": 1,
-      "nome": "Leonardo Pereira",
-      "balance": 1100.5
+      "nome": "Roberto Carlos",
+      "balance": 520
     },
     {
       "id": 2,
-      "nome": "Jose antonio",
-      "balance": 3550
-    },
-    {
-      "id": 3,
-      "nome": "Murilo Henrique",
-      "balance": 2520.5
-    },
-    {
-      "id": 4,
-      "nome": "Roberto Carlos",
-      "balance": 520
+      "nome": "Lucas Wendel",
+      "balance": 4250
     }
   ]
 }
