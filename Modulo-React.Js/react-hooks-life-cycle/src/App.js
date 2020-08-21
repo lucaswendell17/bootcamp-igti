@@ -7,11 +7,14 @@ export default function App() {
   const [showUsers, setShowUsers] = useState(false);
 
   useEffect(() => {
-    fetch('https://randomuser.me/api/?seed=rush&nat=br&results=10')
-      .then((data) => data.json())
-      .then((json) => setUsers(json.results));
-    // const json = await res.json();
-    // setUsers(res.results);
+    const fecthUsers = async () => {
+      const res = await fetch(
+        'https://randomuser.me/api/?seed=rush&nat=br&results=10'
+      );
+      const json = await res.json();
+      setUsers(json.results);
+    };
+    fecthUsers();
   }, []);
 
   const handleShowUsers = (isChecked) => {

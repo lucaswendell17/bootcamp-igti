@@ -1,48 +1,33 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import User from './User';
 
 import css from './user.module.css';
 
-export default class Users extends Component {
-  constructor() {
-    super();
+export default function Users({ users }) {
+  const [secondsVisible, setSecondsVisible] = useState(0);
 
-    this.state = {
-      secondsVisible: 0,
-    };
-
-    this.interval = null;
-  }
-  componentDidMount() {
-    console.log('componentDidMount de Users.js');
-
-    this.interval = setInterval(() => {
-      const { secondsVisible } = this.state;
-      this.setState({ secondsVisible: secondsVisible + 1 });
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSecondsVisible(secondsVisible + 1);
     }, 1000);
-  }
+    return () => {
+      clearInterval(interval);
+    };
+  }, [secondsVisible]);
 
-  componentWillUnmount() {
-    clearInterval(this.interval);
-  }
-  render() {
-    const { users } = this.props;
-    const { secondsVisible } = this.state;
-
-    return (
-      <div>
-        <p>Componente Users visível por {secondsVisible} segundos.</p>
-        <ul className={css.flexLine}>
-          {users.map((user) => {
-            const { login } = user;
-            return (
-              <li key={login.uuid}>
-                <User user={user} />
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-    );
-  }
+  return (
+    <div>
+      <p>Componente Users visível por {secondsVisible} segundos.</p>
+      <ul className={css.flexLine}>
+        {users.map((user) => {
+          const { login } = user;
+          return (
+            <li key={login.uuid}>
+              <User user={user} />
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
 }
