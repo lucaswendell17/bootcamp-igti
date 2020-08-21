@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 
 export default class InputReadOnly extends Component {
   render() {
-    const { value, title, color = 'black' } = this.props;
+    const { value, title, color = 'black', valuePerc, type } = this.props;
     return (
       <div className="input-field col s3">
         <input
           disabled
-          value={value}
+          readOnly
+          value={`${type !== 'p' ? value : value + ' (' + valuePerc + '%)'}`}
           type="text"
           className="validate"
           style={{ color: color }}

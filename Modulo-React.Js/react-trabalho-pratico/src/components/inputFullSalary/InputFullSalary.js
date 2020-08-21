@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 export default class InputFullSalary extends Component {
   handleInputSalary = (event) => {
-    const fullSalary = event.target.value;
+    const fullSalary = Number(event.target.value);
     this.props.handleChangeSalary(fullSalary);
   };
 
@@ -16,6 +16,7 @@ export default class InputFullSalary extends Component {
             className="validate"
             value={value}
             onChange={this.handleInputSalary}
+            step="100"
           />
           <label className="active">{title}</label>
         </div>

@@ -112,8 +112,22 @@ function formatNumber(value) {
   return formatter.format(value);
 }
 
-function calculatePorcentagem(discount, base) {
-  return (discount * 100) / base;
+function calculatePercentage(calculations) {
+  const { discountINSS, discountIRPF, baseINSS, netSalary } = calculations;
+
+  if (baseINSS === 0) {
+    return {
+      disInss: 0,
+      disIrpf: 0,
+      netSalary: 0,
+    };
+  }
+
+  return {
+    disInss: ((discountINSS * 100) / baseINSS).toFixed(2),
+    disIrpf: ((discountIRPF * 100) / baseINSS).toFixed(2),
+    netSalary: ((netSalary * 100) / baseINSS).toFixed(2),
+  };
 }
 
-export { calculateSalaryFrom, formatNumber, calculatePorcentagem };
+export { calculateSalaryFrom, formatNumber, calculatePercentage };
